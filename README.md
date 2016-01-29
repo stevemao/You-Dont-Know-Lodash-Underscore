@@ -20,9 +20,6 @@ Here lists the differences.
 1. [_.findIndex](#_find)
 1. [_.indexOf](#_indexof)
 1. [_.lastIndexOf](#_lastindexof)
-1. [_.includes](#_includes)
-1. [_.keys](#_keys)
-1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
 
 
@@ -56,7 +53,7 @@ Lodash|Underscore|Native
 
 ## _.map
 
-Native doesn't support the `_.property` iteratee shorthand
+Native doesn't support the `_.property` iteratee shorthand.
 
   ```js
   // Underscore/Lodash
@@ -88,7 +85,7 @@ Lodash|Underscore|Native
 
 ## _.every
 
-Native doesn't support the `_.property` iteratee shorthand
+Native doesn't support the `_.property` iteratee shorthand.
 
 ### Performance
 
@@ -101,7 +98,7 @@ Lodash|Underscore|Native
 
 ## _.some
 
-Native doesn't support the `_.matches` iteratee shorthand
+Native doesn't support the `_.matches` iteratee shorthand.
 
   ```js
   // Underscore/Lodash
@@ -149,7 +146,7 @@ Todo
 
 ## _.filter
 
-Native doesn't support the `_.matches` iteratee shorthand
+Native doesn't support the `_.matches` iteratee shorthand.
 
   ```js
   var users = [
@@ -177,152 +174,43 @@ Todo
 
 ## _.find
 
-  ```js
-  // Underscore/Lodash
-  var users = [
-    { 'user': 'barney',  'age': 36, 'active': true },
-    { 'user': 'fred',    'age': 40, 'active': false },
-    { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+### Performance
 
-  _.find(users, function(o) { return o.age < 40; });
-  // output: object for 'barney'
-
-  // Native
-  var users = [
-    { 'user': 'barney',  'age': 36, 'active': true },
-    { 'user': 'fred',    'age': 40, 'active': false },
-    { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
-
-  users.find(function(o) { return o.age < 40; });
-  // output: object for 'barney'
-  ```
+Todo
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.findIndex
 
-  ```js
-  // Underscore/Lodash
-  var users = [
-    { 'user': 'barney',  'age': 36, 'active': true },
-    { 'user': 'fred',    'age': 40, 'active': false },
-    { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+### Performance
 
-  var index =  _.findIndex(users, function(o) { return o.age >= 40; });
-  console.log(index);
-  // output: 1
-
-  // Native
-  var users = [
-    { 'user': 'barney',  'age': 36, 'active': true },
-    { 'user': 'fred',    'age': 40, 'active': false },
-    { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
-
-  var index =  users.findIndex(function(o) { return o.age >= 40; });
-  console.log(index);
-  // output: 1
-  ```
+Todo
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.indexOf
 
-  ```js
-  // Underscore/Lodash
-  var array = [2, 9, 9];
-  var result = _.indexOf(array, 2);    
-  console.log(result); 
-  // output: 0
+### Performance
 
-  // Native
-  var array = [2, 9, 9];
-  var result = array.indexOf(2);    
-  console.log(result); 
-  // output: 0
-  ```
+Todo
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.lastIndexOf
 
-  ```js
-  // Underscore/Lodash
-  var array = [2, 9, 9, 4, 3, 6];
-  var result = _.lastIndexOf(array, 9);    
-  console.log(result); 
-  // output: 2
+### Performance
 
-  // Native
-  var array = [2, 9, 9, 4, 3, 6];
-  var result = array.lastIndexOf(2);    
-  console.log(result); 
-  // output: 0
-  ```
+Todo
 
 **[⬆ back to top](#quick-links)**
-
-
-## _.includes
-
-  ```js
-  var array = [1, 2, 3];
-  // Underscore/Lodash - also called with _.contains
-  _.includes(array, 1);
-  // → true
-
-  // Native
-  var array = [1, 2, 3];
-  array.includes(1);
-  // → true
-  ```
-
-**[⬆ back to top](#quick-links)**
-
-
-## _.keys
-
-  ```js
-  // Underscore/Lodash 
-  var result = _.keys({one: 1, two: 2, three: 3});
-  console.log(result);
-  // output: ["one", "two", "three"]
-
-  // Native
-  var result2 = Object.keys({one: 1, two: 2, three: 3});
-  console.log(result2); 
-  // output: ["one", "two", "three"]
-  ```
-
-**[⬆ back to top](#quick-links)**
-
-
-## _.size
-
-Return the number of values in the collection.
-
-  ```js
-  // Underscore/Lodash
-  var result = _.size({one: 1, two: 2, three: 3});
-  console.log(result);
-  // output: 3
-
-  // Native
-  var result2 = Object.keys({one: 1, two: 2, three: 3}).length;
-  console.log(result2); 
-  // output: 3
-  ```
 
 
 ## _.isNaN
 
-Native coerced the object to a `Number`
+Native coerces the argument to a `Number`.
 
   ```js
   // Underscore/Lodash
@@ -333,6 +221,7 @@ Native coerced the object to a `Number`
   // Confusing special-case behavior
   console.log(isNaN("blabla"));
   // output: true
+  // surprise!
   ```
 
 **[⬆ back to top](#quick-links)**
