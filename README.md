@@ -24,7 +24,6 @@ Here lists the differences.
 1. [_.keys](#_keys)
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
-1. [_.reverse](#_reverse) 
 
 
 ## _.each
@@ -323,31 +322,17 @@ Return the number of values in the collection.
 
 ## _.isNaN
 
+Native coerced the object to a `Number`
+
   ```js
   // Underscore/Lodash
-  console.log(_.isNaN(NaN));
-  // output: true
+  console.log(_.isNaN("blabla"));
+  // output: false
 
   // Native
-  console.log(isNaN(NaN));
+  // Confusing special-case behavior
+  console.log(isNaN("blabla"));
   // output: true
-  ```
-
-**[⬆ back to top](#quick-links)**
-
-
-## _.reverse
-
-  ```js
-  // Lodash
-  var array = [1, 2, 3];
-  console.log(_.reverse(array));
-  // output: [3, 2, 1]
-
-  // Native
-  var array = [1, 2, 3];
-  console.log(array.reverse());
-  // output: [3, 2, 1]
   ```
 
 **[⬆ back to top](#quick-links)**
