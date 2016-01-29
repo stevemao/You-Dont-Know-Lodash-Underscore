@@ -50,7 +50,7 @@ Underscore/Lodash may exit iteration early by explicitly returning `false`.
 
 Lodash|Underscore|Native 
 --- | --- | ---
-972,874|101,878|102,864 (**89% slower**)|
+972,874|101,878|102,864 (**89% slower**)
 
 **[⬆ back to top](#quick-links)**
 
@@ -82,130 +82,96 @@ Native doesn't support the `_.property` iteratee shorthand
 
 Lodash|Underscore|Native 
 --- | --- | ---
-1,214,010|1,171,239|192,404 (**94% slower**)|
+1,214,010|1,171,239|192,404 (**94% slower**)
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.every
 
-  ```js
-  // Underscore/Lodash
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
-  }
-  var array = [10, 20, 30];
-  var result = _.every(array, isLargerThanTen);
-  console.log(result);
-  // output: true
+Native doesn't support the `_.property` iteratee shorthand
 
-  // Native
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
-  }
+### Performance
 
-  var array = [10, 20, 30];
-  var result = array.every(isLargerThanTen);
-  console.log(result);
-  // output: true
-  ```
+Lodash|Underscore|Native 
+--- | --- | ---
+1,342,410|1,373,736|1,410,766
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.some
 
+Native doesn't support the `_.matches` iteratee shorthand
+
   ```js
   // Underscore/Lodash
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
-  }
-  var array = [10, 9, 8];
-  var result = _.some(array, isLargerThanTen);
-  console.log(result);
-  // output: true
+  var users = [
+    { 'user': 'barney', 'active': true },
+    { 'user': 'fred',   'active': false }
+  ];
+  
+  // using the `_.matches` iteratee shorthand
+  _.some(users, { 'user': 'barney', 'active': false });
+  // output: false
 
   // Native
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
-  }
-
-  var array = [10, 9, 8];
-  var result = array.some(isLargerThanTen);
-  console.log(result);
-  // output: true
+  var users = [
+    { 'user': 'barney', 'active': true },
+    { 'user': 'fred',   'active': false }
+  ];
+  var result = array.some({ 'user': 'barney', 'active': false }); // error!
   ```
+  
+### Performance
+
+Todo
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.reduce
 
-  ```js
-  // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4];
-  var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue;
-  });
-  console.log(result);
-  // output: 10
+### Performance
 
-  // Native
-  var array = [0, 1, 2, 3, 4];
-  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue;
-  });
-  console.log(result);
-  // output: 10
-  ```
+Lodash|Underscore|Native 
+--- | --- | ---
+8,734|5,481|7,467
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.reduceRight
 
-  ```js
-  // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4];
-  var result = _.reduceRight(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue;
-  });
-  console.log(result);
-  // output: -2
-
-  // Native
-  var array = [0, 1, 2, 3, 4];
-  var result = array.reduceRight(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue;
-  });
-  console.log(result);
-  // output: -2
-  ```
+Todo
 
 **[⬆ back to top](#quick-links)**
 
 
 ## _.filter
 
+Native doesn't support the `_.matches` iteratee shorthand
+
   ```js
-  // Underscore/Lodash
-  function isBigEnough(value) {
-    return value >= 10;
-  } 
-  var array = [12, 5, 8, 130, 44];
-  var filtered = _.filter(array, isBigEnough);
-  console.log(filtered);
-  // output: [12, 130, 44]
+  var users = [
+    { 'user': 'barney', 'age': 36, 'active': true },
+    { 'user': 'fred',   'age': 40, 'active': false }
+  ];
+  // using the `_.matches` iteratee shorthand
+  _.filter(users, { 'age': 36, 'active': true });
+  // output: objects for ['barney']
 
   // Native
-  function isBigEnough(value) {
-    return value >= 10;
-  } 
-  var array = [12, 5, 8, 130, 44];
-  var filtered = array.filter(isBigEnough);
-  console.log(filtered);
-  // output: [12, 130, 44]
+  var users = [
+    { 'user': 'barney', 'age': 36, 'active': true },
+    { 'user': 'fred',   'age': 40, 'active': false }
+  ];
+  var filtered = users.filter({ 'age': 36, 'active': true }); // error!
   ```
+
+### Performance
+
+Todo
 
 **[⬆ back to top](#quick-links)**
 
@@ -387,7 +353,7 @@ Return the number of values in the collection.
 **[⬆ back to top](#quick-links)**
 
 
-## Reference
+## References
 
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [Underscore.js](http://underscorejs.org)
