@@ -222,6 +222,11 @@ Native coerces the argument to a `Number`.
   console.log(isNaN("blabla"));
   // output: true
   // surprise!
+  
+  // ES6
+  console.log(Number.isNaN("blabla"));
+  // output: false
+  // but browser support maybe the problem
   ```
 
 **[⬆ back to top](#quick-links)**
