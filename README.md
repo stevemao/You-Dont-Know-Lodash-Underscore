@@ -4,7 +4,7 @@ In response to [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-
 
 > If you're only using a handful of methods on arrays and don't care about nullish guards, object iteration, smoothing over enviro/ES5/ES6 issues, FP goodies, iteratee shorthands, lazy evaluation, or other enhancements then built-ins are the way to go. Folks who use lodash know its 270+ modules work great combo'ed with ES6, enabling cleaner code and empowering beyond built-ins.
 
-Here lists the differences.
+Here lists the differences. Note: the numbers in performance means Ops/sec.
 
 
 ## Quick links
