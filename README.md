@@ -1,4 +1,4 @@
-## You don't (may not) know about Lodash/Underscore 
+## You don't (may not) know Lodash/Underscore 
 
 In response to [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore) made by [@cht8687](https://github.com/cht8687), yes some of the methods could be replaced by native methods. This is not the case when things get a bit more complex. According to the [Lodash](https://lodash.com/) author, [@jdalton](https://github.com/jdalton):
 
