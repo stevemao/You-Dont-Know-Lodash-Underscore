@@ -37,6 +37,7 @@ Underscore/Lodash may exit iteration early by explicitly returning `false`.
 
   // Native
   [1, 2, 3].forEach(function(value, index) {
+    console.log(value);
     return false; // does not exit the iteration!
   });
   // output: 1 2 3
