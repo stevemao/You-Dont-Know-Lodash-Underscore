@@ -1,0 +1,79 @@
+{
+  "concat": {
+    "reasons": ["stripped down"]
+  },
+
+  "fill": {
+    "reasons": ["browser support"]
+  },
+
+  "find": {
+    "reasons": ["browser support"]
+  },
+
+  "findIndex": {
+    "reasons": ["browser support"]
+  },
+
+  "indexOf": {
+    "reasons": ["stripped down"]
+  },
+
+  "lastIndexOf": {
+    "reasons": ["stripped down"]
+  },
+
+  "forEach": {
+    "reasons": ["stripped down"]
+  },
+
+  "every": {
+    "reasons": ["stripped down"]
+  },
+
+  "filter": {
+    "reasons": ["stripped down"]
+  },
+
+  "includes": {
+    "reasons": ["browser support"]
+  },
+
+  "map": {
+    "reasons": ["stripped down"]
+  },
+
+  "reduce": {
+    "reasons": ["stripped down"]
+  },
+
+  "reduceRight": {
+    "reasons": ["stripped down"]
+  },
+
+  "some": {
+    "reasons": ["stripped down"]
+  },
+
+  "isNaN": {
+    "reasons": ["browser bug", "unexpected coercion"]
+  },
+
+  "assign": {
+    "reasons": ["browser support"]
+  },
+
+  "repeat": {
+    "reasons": ["browser support"]
+  },
+
+  "trimRight": {
+    "reason": ["not standard"],
+    "alternative": "lodash.trimStart"
+  },
+
+  "trimLeft": {
+    "reason": ["not standard"],
+    "alternative": "lodash.trimEnd"
+  }
+}

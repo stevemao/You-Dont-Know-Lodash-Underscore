@@ -1,0 +1,40 @@
+{
+  "name": "eslint-plugin-you-dont-know-lodash-underscore",
+  "version": "0.0.0",
+  "description": "Check methods that you can gain by using lodash/underscore",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevemao/You-Dont-Know-Lodash-Underscore.git"
+  },
+  "keywords": [
+    "underscore",
+    "lodash",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "native"
+  ],
+  "author": "Steve Mao <maochenyan@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
+    "test": "istanbul cover --dir reports/coverage node_modules/mocha/bin/_mocha tests/**/*.js -- --reporter dot"
+  },
+  "dependencies": {
+    "kebab-case": "^1.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^3.0.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevemao/You-Dont-Know-Lodash-Underscore/issues"
+  },
+  "homepage": "https://github.com/stevemao/You-Dont-Know-Lodash-Underscore.git"
+}
