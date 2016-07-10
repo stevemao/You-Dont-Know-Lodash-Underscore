@@ -1,8 +1,14 @@
-## You don't (may not) know Lodash/Underscore 
+## You don't (may not) know Lodash/Underscore
 
 In response to [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore) made by [@cht8687](https://github.com/cht8687), yes some of the methods could be replaced by native methods. This is not the case when things get a bit more complex. According to the [Lodash](https://lodash.com/) author, [@jdalton](https://github.com/jdalton):
 
 > If you're only using a handful of methods on arrays and don't care about nullish guards, object iteration, smoothing over enviro/ES5/ES6 issues, FP goodies, iteratee shorthands, lazy evaluation, or other enhancements then built-ins are the way to go. Folks who use lodash know its 270+ modules work great combo'ed with ES6, enabling cleaner code and empowering beyond built-ins.
+
+
+## ESLint?
+
+[There is a plugin](https://github.com/wix/eslint-plugin-lodash#preference-over-native)
+
 
 Here lists the differences. Note: the numbers in performance means Ops/sec.
 
@@ -45,7 +51,7 @@ Underscore/Lodash may exit iteration early by explicitly returning `false`.
 
 ### Performance
 
-Lodash|Underscore|Native 
+Lodash|Underscore|Native
 --- | --- | ---
 972,874|101,878|102,864 (**89% slower**)
 
@@ -77,7 +83,7 @@ Native doesn't support the `_.property` iteratee shorthand.
 
 ### Performance
 
-Lodash|Underscore|Native 
+Lodash|Underscore|Native
 --- | --- | ---
 1,214,010|1,171,239|192,404 (**94% slower**)
 
@@ -90,7 +96,7 @@ Native doesn't support the `_.property` iteratee shorthand.
 
 ### Performance
 
-Lodash|Underscore|Native 
+Lodash|Underscore|Native
 --- | --- | ---
 1,342,410|1,373,736|1,410,766
 
@@ -107,7 +113,7 @@ Native doesn't support the `_.matches` iteratee shorthand.
     { 'user': 'barney', 'active': true },
     { 'user': 'fred',   'active': false }
   ];
-  
+
   // using the `_.matches` iteratee shorthand
   _.some(users, { 'user': 'barney', 'active': false });
   // output: false
@@ -119,7 +125,7 @@ Native doesn't support the `_.matches` iteratee shorthand.
   ];
   var result = array.some({ 'user': 'barney', 'active': false }); // error!
   ```
-  
+
 ### Performance
 
 Todo
@@ -131,7 +137,7 @@ Todo
 
 ### Performance
 
-Lodash|Underscore|Native 
+Lodash|Underscore|Native
 --- | --- | ---
 8,734|5,481|7,467
 
@@ -223,7 +229,7 @@ Native coerces the argument to a `Number`.
   console.log(isNaN("blabla"));
   // output: true
   // surprise!
-  
+
   // ES6
   console.log(Number.isNaN("blabla"));
   // output: false
