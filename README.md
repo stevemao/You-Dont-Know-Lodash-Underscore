@@ -10,9 +10,6 @@ In response to [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-
 [There is a plugin](https://github.com/wix/eslint-plugin-lodash#preference-over-native)
 
 
-Here lists the differences. Note: the numbers in performance means Ops/sec.
-
-
 ## Quick links
 
 1. [_.each](#_each)
@@ -28,6 +25,7 @@ Here lists the differences. Note: the numbers in performance means Ops/sec.
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.isNaN](#_isnan)
 
+Note: the numbers in performance means Ops/sec.
 
 ## _.each
 
