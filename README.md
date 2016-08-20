@@ -25,7 +25,7 @@ In response to [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.isNaN](#_isnan)
 
-Note: the numbers in performance means Ops/sec.
+*Note: The unit in performance field is Ops/sec.*
 
 ## _.each
 
