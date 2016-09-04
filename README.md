@@ -245,6 +245,27 @@ Native coerces the argument to a `Number`.
 * [jsPerf](https://jsperf.com)
 
 
+## Further reading
+
+I'd like to quote [jQuery's browser bug workarounds](https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o/edit#heading=h.fumxprdxo2gn) here:
+
+> While the sentiment of youmightnotneedjquery is great, developers should be aware that ditching libraries, like jQuery, can easily require large amounts of research on their end to avoid bugs (even in modern browsers). The snippets provided by youmightnotneedjquery are a starting point but hardly scratch the surface of being a solid robust replacement to jQuery.
+
+> The great thing about an established library, like jQuery, is it’s hammered on by lots of talented people, transparently improved, and refined by the community. 
+
+> Concerned over file size? When it comes to page load time, count of HTTP requests (and placement) matter far more than total JS size. And heck, jQuery 1.9.x and 2.x allow custom builds, so you can minimize what of jQuery you end up shipping.
+
+> This line from youmightnotneedjquery is worth repeating…
+> “At the very least, make sure you know what jQuery is doing for you, and what it's not.”
+
+
+> ~ John-David Dalton, Paul Irish
+
+> Feb 6, 2014
+
+To extend, you should also know what your library/framework is doing. Browser support/fixing bugs is one thing. Tons of features/performance improvements should also take into account.
+
+
 # License
 
 MIT
